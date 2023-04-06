@@ -1,1 +1,1 @@
-# WinX_Banking_Server
+# WinX Banking Server
