@@ -4,6 +4,8 @@ import { loginUserSchema } from '../validators/UserSchema'
 import { LoginUserRequest } from "../request";
 import TransactionService from "../../core/service/TransactionService";
 import { AccountService } from "../../core/service";
+import { AccountResponseMapper } from "../mapper/OpenFinanceResponseMapper";
+import { OpenFinanceResponse } from "../response/OpenFinanceResponse";
 
 export default class OpenFinanceController extends BaseController {
 
@@ -11,11 +13,15 @@ export default class OpenFinanceController extends BaseController {
         super();
     }
 
-    public execute = async (req: Request, res: Response, next: NextFunction) => {
-        this.validateRequest(loginUserSchema, req, res);
-        const user: LoginUserRequest = req.body;
+    public execute = async (_: Request, res: Response, next: NextFunction) => {
+        let response: Array<OpenFinanceResponse> = [];
+        
+        const accounts = await this.accountService.execute()
 
-        await this.service.execute(user);
+        for(const account of accounts){
+            const transactions = await this.transactionService.execute(account.id, account.isCreditCard)
+            response.push(AccountResponseMapper.from(account, transactions))
+        }
 
         res.status(200).send({ message: "User authenticated!" });        
     }

@@ -5,6 +5,7 @@ import { DebitAccountDataResponse } from "../response/DebitAccountResponse";
 export class AccountResponseMapper{
     public static fromCredit(creditAccountDataResponse: CreditAccountDataResponse, creditLimits: any): AccountResponse {
         const account: AccountResponse  = {
+            id: creditAccountDataResponse.creditCardAccountId,
             name: creditAccountDataResponse.brandName,
             value: creditLimits.usedAmount.amount,
             cardNumber: 1234, // TODO: Buscar numero do cartao
@@ -18,6 +19,7 @@ export class AccountResponseMapper{
 
     public static fromDebit(debitAccountDataResponse: DebitAccountDataResponse, debitAccountBalance: any): AccountResponse {
         const account: AccountResponse  = {
+            id: debitAccountDataResponse.accountId,
             name: debitAccountDataResponse.brandName,
             value: debitAccountBalance,
             cardNumber: 1234, // TODO: Buscar numero do cartao
