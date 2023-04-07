@@ -1,9 +1,10 @@
 import ErrorResponse from "../../config/ErrorResponse";
 import OpenFinanceURL from "../../constants/OpenFinanceURL";
 import axios from "axios";
+import { CreditTransactionsResponse } from "../response/CreditTransactionsResponse";
 
 export default class TransactionGateway {
-    public async execute(accountId: string, isCredit: boolean) {
+    public async execute(accountId: string, isCredit: boolean): Promise<CreditTransactionsResponse> {
         let url: string;
 
         if(isCredit){
@@ -13,7 +14,7 @@ export default class TransactionGateway {
             url = OpenFinanceURL.OPEN_FINANCE_DEBIT_TRANSACTIONS_URL.replace('{{account_id}}', accountId);
         }
 
-        const transactions = await axios.get(url).then(response => {
+        const transactions: CreditTransactionsResponse = await axios.get(url).then(response => {
             return response.data;
         }).catch(error => {
             console.log("error -> ", error)
