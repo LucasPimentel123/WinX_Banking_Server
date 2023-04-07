@@ -1,328 +1,328 @@
 {
-  "uuid": "dd3e0023-6512-413d-8232-089227373568",
-  "lastMigration": 27,
-  "name": "Demo API",
-  "endpointPrefix": "",
-  "latency": 0,
-  "port": 3000,
-  "hostname": "",
-  "folders": [],
-  "routes": [
-    {
-      "uuid": "9adf3fa8-2516-4331-a248-93ef67e76a8e",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "debit/accounts",
-      "responses": [
-        {
-          "uuid": "45757a59-02cb-4ab7-8bae-b99e8c61fcad",
-          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"brandName\": \"Nubank\",\r\n      \"companyCnpj\": \"32110893000114\",\r\n      \"type\": \"CONTA_DEPOSITO_A_VISTA\",\r\n      \"compeCode\": \"001\",\r\n      \"branchCode\": \"8290\",\r\n      \"number\": \"96377452\",\r\n      \"checkDigit\": \"4\",\r\n      \"accountId\": \"92102126018828279211650011131989319352451\"\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 2,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true
-        }
-      ],
-      "enabled": true,
-      "responseMode": null
+    "uuid": "dd3e0023-6512-413d-8232-089227373568",
+    "lastMigration": 27,
+    "name": "Demo API",
+    "endpointPrefix": "",
+    "latency": 0,
+    "port": 3000,
+    "hostname": "",
+    "folders": [],
+    "routes": [
+      {
+        "uuid": "9adf3fa8-2516-4331-a248-93ef67e76a8e",
+        "type": "http",
+        "documentation": "",
+        "method": "get",
+        "endpoint": "debit/accounts",
+        "responses": [
+          {
+            "uuid": "45757a59-02cb-4ab7-8bae-b99e8c61fcad",
+            "body": "{\r\n  \"data\": [\r\n    {\r\n      \"brandName\": \"Nubank\",\r\n      \"companyCnpj\": \"32110893000114\",\r\n      \"type\": \"CONTA_DEPOSITO_A_VISTA\",\r\n      \"compeCode\": \"001\",\r\n      \"branchCode\": \"8290\",\r\n      \"number\": \"96377452\",\r\n      \"checkDigit\": \"4\",\r\n      \"accountId\": \"92102126018828279211650011131989319352451\"\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 2,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
+            "latency": 0,
+            "statusCode": 200,
+            "label": "",
+            "headers": [],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": true
+          }
+        ],
+        "enabled": true,
+        "responseMode": null
+      },
+      {
+        "uuid": "efd5dbff-4418-47d6-9025-185254ef9521",
+        "type": "http",
+        "documentation": "",
+        "method": "get",
+        "endpoint": "debit/accounts/:account_id/balances",
+        "responses": [
+          {
+            "uuid": "3aa50b10-2150-4b50-bb4d-1c5e49b3b0b0",
+            "body": "{\r\n  \"data\": {\r\n    \"availableAmount\": {\r\n      \"amount\": \"5322.9400\",\r\n      \"currency\": \"BRL\"\r\n    },\r\n    \"blockedAmount\": {\r\n      \"amount\": \"1000.0400\",\r\n      \"currency\": \"BRL\"\r\n    },\r\n    \"automaticallyInvestedAmount\": {\r\n      \"amount\": \"1000.0400\",\r\n      \"currency\": \"BRL\"\r\n    }\r\n  },\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 1,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
+            "latency": 0,
+            "statusCode": 200,
+            "label": "",
+            "headers": [],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [
+              {
+                "target": "params",
+                "modifier": "account_id",
+                "value": "92102126018828279211650011131989319352451",
+                "invert": false,
+                "operator": "equals"
+              }
+            ],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": true
+          }
+        ],
+        "enabled": true,
+        "responseMode": null
+      },
+      {
+        "uuid": "43c6fea1-2f35-497b-9052-905d162f5d21",
+        "type": "http",
+        "documentation": "",
+        "method": "get",
+        "endpoint": "debit/accounts/:account_id/transactions",
+        "responses": [
+          {
+            "uuid": "4f05713d-3711-4323-86a8-9b0ec4b0c128",
+            "body": "{\r\n  \"data\": [\r\n    {\r\n      \"transactionId\": \"TXpRMU9UQTROMWhZV2xSU1FUazJSMDl\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"255.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"7aTtAjcJiZ2xOQ8jvUnWW8Et6v\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"279.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"yX9StPOBhZpMZNPTqkBQltnGSs\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"CREDITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"1000.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"81b6bDDTLqMhqbzhYoNB0V7uCU\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"115.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"8WX2O163eUkflUz9gpoqCA7i0Y\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"CREDITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"2000.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"hF8wnn5U96rCypMhWJCDNjOVUH\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"CREDITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"500.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"hhVwk2Ph3shJMiK288v9BP1vFT\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"79.5000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"Dbt1ASgGiM0UjLFJphbWYYPNf4\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"29.9000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"9B7KwOgwKpFe93hObsFRKd0iYn\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"CREDITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"525.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
+            "latency": 0,
+            "statusCode": 200,
+            "label": "",
+            "headers": [],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [
+              {
+                "target": "params",
+                "modifier": "account_id",
+                "value": "92102126018828279211650011131989319352451",
+                "invert": false,
+                "operator": "equals"
+              }
+            ],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": true
+          }
+        ],
+        "enabled": true,
+        "responseMode": null
+      },
+      {
+        "uuid": "e84acf36-030f-4ae0-837c-ba12a6a2d706",
+        "type": "http",
+        "documentation": "",
+        "method": "get",
+        "endpoint": "credit/accounts",
+        "responses": [
+          {
+            "uuid": "2a0f96bf-9c13-4985-82e6-3358366facb5",
+            "body": "{\r\n  \"data\": [\r\n    {\r\n      \"creditCardAccountId\": \"XXZTR3459087\",\r\n      \"brandName\": \"Banco BRB\",\r\n      \"companyCnpj\": \"21128159000166\",\r\n      \"name\": \"Cartão Universitário\",\r\n      \"productType\": \"OUTROS\",\r\n      \"productAdditionalInfo\": \"string\",\r\n      \"creditCardNetwork\": \"VISA\",\r\n      \"networkAdditionalInfo\": \"AURA CARD\"\r\n    },\r\n    {\r\n      \"creditCardAccountId\": \"NSSHLZRCRUER\",\r\n      \"brandName\": \"Banco do Brasil\",\r\n      \"companyCnpj\": \"21128159000166\",\r\n      \"name\": \"Cartão Universitário\",\r\n      \"productType\": \"OUTROS\",\r\n      \"productAdditionalInfo\": \"string\",\r\n      \"creditCardNetwork\": \"VISA\",\r\n      \"networkAdditionalInfo\": \"AURA CARD\"\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 1,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
+            "latency": 0,
+            "statusCode": 200,
+            "label": "",
+            "headers": [],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": true
+          }
+        ],
+        "enabled": true,
+        "responseMode": null
+      },
+      {
+        "uuid": "9cc2e694-8665-4ed8-90e4-e970d87af153",
+        "type": "http",
+        "documentation": "",
+        "method": "get",
+        "endpoint": "credit/accounts/:account_id/limits",
+        "responses": [
+          {
+            "uuid": "0d64239d-4a5c-48a0-95d6-31ac1964316c",
+            "body": "{\r\n  \"data\": [\r\n    {\r\n      \"creditLineLimitType\": \"LIMITE_CREDITO_TOTAL\",\r\n      \"consolidationType\": \"CONSOLIDADO\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"lineName\": \"CREDITO_A_VISTA\",\r\n      \"lineNameAdditionalInfo\": \"Informações adicionais e complementares.\",\r\n      \"isLimitFlexible\": true,\r\n      \"limitAmount\": {\r\n        \"amount\": \"8000.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"usedAmount\": {\r\n        \"amount\": \"5750.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"availableAmount\": {\r\n        \"amount\": \"2250.0000\",\r\n        \"currency\": \"BRL\"\r\n      }\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 1,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
+            "latency": 0,
+            "statusCode": 200,
+            "label": "",
+            "headers": [],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [
+              {
+                "target": "params",
+                "modifier": "account_id",
+                "value": "XXZTR3459087",
+                "invert": false,
+                "operator": "equals"
+              }
+            ],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": true
+          },
+          {
+            "uuid": "52a82656-c499-48c8-9a2a-3e9828f64616",
+            "body": "{\r\n  \"data\": [\r\n    {\r\n      \"creditLineLimitType\": \"LIMITE_CREDITO_TOTAL\",\r\n      \"consolidationType\": \"CONSOLIDADO\",\r\n      \"identificationNumber\": \"4451\",\r\n      \"lineName\": \"CREDITO_A_VISTA\",\r\n      \"lineNameAdditionalInfo\": \"Informações adicionais e complementares.\",\r\n      \"isLimitFlexible\": true,\r\n      \"limitAmount\": {\r\n        \"amount\": \"12000.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"usedAmount\": {\r\n        \"amount\": \"4200.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"availableAmount\": {\r\n        \"amount\": \"7800.0000\",\r\n        \"currency\": \"BRL\"\r\n      }\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 1,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
+            "latency": 0,
+            "statusCode": 200,
+            "label": "",
+            "headers": [],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [
+              {
+                "target": "params",
+                "modifier": "account_id",
+                "value": "NSSHLZRCRUER",
+                "invert": false,
+                "operator": "equals"
+              }
+            ],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": false
+          }
+        ],
+        "enabled": true,
+        "responseMode": null
+      },
+      {
+        "uuid": "2973418e-1623-4e41-bf12-650112211e30",
+        "type": "http",
+        "documentation": "",
+        "method": "get",
+        "endpoint": "credit/accounts/:account_id/transactions",
+        "responses": [
+          {
+            "uuid": "0228eda0-6f75-4948-a8ba-da752add089f",
+            "body": "{\r\n  \"data\": [\r\n    {\r\n      \"transactionId\": \"TXpRMU9UQTROMWhZV2xSU1FUazJSMDl\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"675.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"675.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-06\",\r\n      \"billPostDate\": \"2023-04-06\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"gqvdPkZVYMXaLr1r7KHcuqVQ1A3SidM\",\r\n      \"identificationNumber\": \"4454\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1500.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1500.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-04\",\r\n      \"billPostDate\": \"2023-04-04\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"kjdCUJNLgsHmksEUyVPXVeOyOZ7kmR4\",\r\n      \"identificationNumber\": \"4455\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"800.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"800.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-01\",\r\n      \"billPostDate\": \"2023-04-01\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"ugGtWTU3dYJJSSh9yb5Ue6COvqvLJ8V\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-28\",\r\n      \"billPostDate\": \"2023-03-28\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"yWhvmkGG2TMbPX8UcC4d9ndHe7IUO1O\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"2000.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"2000.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-25\",\r\n      \"billPostDate\": \"2023-03-25\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"5OlyHuhgsdcoPL2OkNX63EqfdES1CzM\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"CASHBACK\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1780.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1780.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-21\",\r\n      \"billPostDate\": \"2023-03-21\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"s4YmrPN9R967fFH2dmXMBggAyOhpWrp\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-17\",\r\n      \"billPostDate\": \"2023-03-17\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"9pdV5WLsvZilRmABp3rKOQmipbyjqYk\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"285.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"285.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-13\",\r\n      \"billPostDate\": \"2023-03-13\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"HkxPjR6WJdtH9gs1aQXCiiHNbzijXpx\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"170.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"170.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-10\",\r\n      \"billPostDate\": \"2023-03-10\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"JryrGN6pHxxNpihf9j5csZaf8bQryWG\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"100.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"100.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-06\",\r\n      \"billPostDate\": \"2023-03-06\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
+            "latency": 0,
+            "statusCode": 200,
+            "label": "",
+            "headers": [],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [
+              {
+                "target": "params",
+                "modifier": "account_id",
+                "value": "XXZTR3459087",
+                "invert": false,
+                "operator": "equals"
+              }
+            ],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": true
+          },
+          {
+            "uuid": "c2154933-8b19-4ba1-8ba2-5e6e0a87268e",
+            "body": "{\r\n  \"data\": [\r\n    {\r\n      \"transactionId\": \"TXpRMU9UQTROMWhZV2xSU1FUazJSMDl\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"550.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"550.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-06\",\r\n      \"billPostDate\": \"2023-04-06\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"gqvdPkZVYMXaLr1r7KHcuqVQ1A3SidM\",\r\n      \"identificationNumber\": \"4454\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-04\",\r\n      \"billPostDate\": \"2023-04-04\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"kjdCUJNLgsHmksEUyVPXVeOyOZ7kmR4\",\r\n      \"identificationNumber\": \"4455\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-01\",\r\n      \"billPostDate\": \"2023-04-01\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"ugGtWTU3dYJJSSh9yb5Ue6COvqvLJ8V\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-28\",\r\n      \"billPostDate\": \"2023-03-28\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"yWhvmkGG2TMbPX8UcC4d9ndHe7IUO1O\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"80.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"80.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-25\",\r\n      \"billPostDate\": \"2023-03-25\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"5OlyHuhgsdcoPL2OkNX63EqfdES1CzM\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"CASHBACK\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1700.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-21\",\r\n      \"billPostDate\": \"2023-03-21\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"s4YmrPN9R967fFH2dmXMBggAyOhpWrp\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-17\",\r\n      \"billPostDate\": \"2023-03-17\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"9pdV5WLsvZilRmABp3rKOQmipbyjqYk\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-13\",\r\n      \"billPostDate\": \"2023-03-13\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"HkxPjR6WJdtH9gs1aQXCiiHNbzijXpx\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"450.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"450.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-10\",\r\n      \"billPostDate\": \"2023-03-10\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"JryrGN6pHxxNpihf9j5csZaf8bQryWG\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1520.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1520.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-06\",\r\n      \"billPostDate\": \"2023-03-06\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
+            "latency": 0,
+            "statusCode": 200,
+            "label": "",
+            "headers": [],
+            "bodyType": "INLINE",
+            "filePath": "",
+            "databucketID": "",
+            "sendFileAsBody": false,
+            "rules": [
+              {
+                "target": "params",
+                "modifier": "account_id",
+                "value": "NSSHLZRCRUER",
+                "invert": false,
+                "operator": "equals"
+              }
+            ],
+            "rulesOperator": "OR",
+            "disableTemplating": false,
+            "fallbackTo404": false,
+            "default": false
+          }
+        ],
+        "enabled": true,
+        "responseMode": null
+      }
+    ],
+    "rootChildren": [
+      {
+        "type": "route",
+        "uuid": "9adf3fa8-2516-4331-a248-93ef67e76a8e"
+      },
+      {
+        "type": "route",
+        "uuid": "efd5dbff-4418-47d6-9025-185254ef9521"
+      },
+      {
+        "type": "route",
+        "uuid": "43c6fea1-2f35-497b-9052-905d162f5d21"
+      },
+      {
+        "type": "route",
+        "uuid": "e84acf36-030f-4ae0-837c-ba12a6a2d706"
+      },
+      {
+        "type": "route",
+        "uuid": "9cc2e694-8665-4ed8-90e4-e970d87af153"
+      },
+      {
+        "type": "route",
+        "uuid": "2973418e-1623-4e41-bf12-650112211e30"
+      }
+    ],
+    "proxyMode": false,
+    "proxyHost": "",
+    "proxyRemovePrefix": false,
+    "tlsOptions": {
+      "enabled": false,
+      "type": "CERT",
+      "pfxPath": "",
+      "certPath": "",
+      "keyPath": "",
+      "caPath": "",
+      "passphrase": ""
     },
-    {
-      "uuid": "efd5dbff-4418-47d6-9025-185254ef9521",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "debit/accounts/:account_id/balances",
-      "responses": [
-        {
-          "uuid": "3aa50b10-2150-4b50-bb4d-1c5e49b3b0b0",
-          "body": "{\r\n  \"data\": {\r\n    \"availableAmount\": {\r\n      \"amount\": \"5322.9400\",\r\n      \"currency\": \"BRL\"\r\n    },\r\n    \"blockedAmount\": {\r\n      \"amount\": \"1000.0400\",\r\n      \"currency\": \"BRL\"\r\n    },\r\n    \"automaticallyInvestedAmount\": {\r\n      \"amount\": \"1000.0400\",\r\n      \"currency\": \"BRL\"\r\n    }\r\n  },\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 1,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "params",
-              "modifier": "account_id",
-              "value": "92102126018828279211650011131989319352451",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true
-        }
-      ],
-      "enabled": true,
-      "responseMode": null
-    },
-    {
-      "uuid": "43c6fea1-2f35-497b-9052-905d162f5d21",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "debit/accounts/:account_id/transactions",
-      "responses": [
-        {
-          "uuid": "4f05713d-3711-4323-86a8-9b0ec4b0c128",
-          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"transactionId\": \"TXpRMU9UQTROMWhZV2xSU1FUazJSMDl\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"255.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"7aTtAjcJiZ2xOQ8jvUnWW8Et6v\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"279.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"yX9StPOBhZpMZNPTqkBQltnGSs\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"CREDITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"1000.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"81b6bDDTLqMhqbzhYoNB0V7uCU\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"115.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"8WX2O163eUkflUz9gpoqCA7i0Y\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"CREDITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"2000.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"hF8wnn5U96rCypMhWJCDNjOVUH\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"CREDITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"500.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"hhVwk2Ph3shJMiK288v9BP1vFT\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"79.5000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"Dbt1ASgGiM0UjLFJphbWYYPNf4\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"29.9000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    },\r\n    {\r\n      \"transactionId\": \"9B7KwOgwKpFe93hObsFRKd0iYn\",\r\n      \"completedAuthorisedPaymentType\": \"TRANSACAO_EFETIVADA\",\r\n      \"creditDebitType\": \"CREDITO\",\r\n      \"transactionName\": \"TRANSFCWAR5TXHCX5I9IDBHML8082N8NEO30M6LNNG7ANAYIJYRM00ZBZPU8\",\r\n      \"type\": \"PIX\",\r\n      \"transactionAmount\": {\r\n        \"amount\": \"525.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2021-01-07\",\r\n      \"partieCnpjCpf\": \"43908445778\",\r\n      \"partiePersonType\": \"PESSOA_NATURAL\",\r\n      \"partieCompeCode\": \"001\",\r\n      \"partieBranchCode\": \"6272\",\r\n      \"partieNumber\": \"67890854360\",\r\n      \"partieCheckDigit\": \"4\"\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "params",
-              "modifier": "account_id",
-              "value": "92102126018828279211650011131989319352451",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true
-        }
-      ],
-      "enabled": true,
-      "responseMode": null
-    },
-    {
-      "uuid": "e84acf36-030f-4ae0-837c-ba12a6a2d706",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "credit/accounts",
-      "responses": [
-        {
-          "uuid": "2a0f96bf-9c13-4985-82e6-3358366facb5",
-          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"creditCardAccountId\": \"XXZTR3459087\",\r\n      \"brandName\": \"Banco BRB\",\r\n      \"companyCnpj\": \"21128159000166\",\r\n      \"name\": \"Cartão Universitário\",\r\n      \"productType\": \"OUTROS\",\r\n      \"productAdditionalInfo\": \"string\",\r\n      \"creditCardNetwork\": \"VISA\",\r\n      \"networkAdditionalInfo\": \"AURA CARD\"\r\n    },\r\n    {\r\n      \"creditCardAccountId\": \"NSSHLZRCRUER\",\r\n      \"brandName\": \"Banco BRB\",\r\n      \"companyCnpj\": \"21128159000166\",\r\n      \"name\": \"Cartão Universitário\",\r\n      \"productType\": \"OUTROS\",\r\n      \"productAdditionalInfo\": \"string\",\r\n      \"creditCardNetwork\": \"VISA\",\r\n      \"networkAdditionalInfo\": \"AURA CARD\"\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 1,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true
-        }
-      ],
-      "enabled": true,
-      "responseMode": null
-    },
-    {
-      "uuid": "9cc2e694-8665-4ed8-90e4-e970d87af153",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "credit/:account_id/limits",
-      "responses": [
-        {
-          "uuid": "0d64239d-4a5c-48a0-95d6-31ac1964316c",
-          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"creditLineLimitType\": \"LIMITE_CREDITO_TOTAL\",\r\n      \"consolidationType\": \"CONSOLIDADO\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"lineName\": \"CREDITO_A_VISTA\",\r\n      \"lineNameAdditionalInfo\": \"Informações adicionais e complementares.\",\r\n      \"isLimitFlexible\": true,\r\n      \"limitAmount\": {\r\n        \"amount\": \"8000.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"usedAmount\": {\r\n        \"amount\": \"5750.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"availableAmount\": {\r\n        \"amount\": \"2250.0000\",\r\n        \"currency\": \"BRL\"\r\n      }\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 1,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "params",
-              "modifier": "account_id",
-              "value": "XXZTR3459087",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true
-        },
-        {
-          "uuid": "52a82656-c499-48c8-9a2a-3e9828f64616",
-          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"creditLineLimitType\": \"LIMITE_CREDITO_TOTAL\",\r\n      \"consolidationType\": \"CONSOLIDADO\",\r\n      \"identificationNumber\": \"4451\",\r\n      \"lineName\": \"CREDITO_A_VISTA\",\r\n      \"lineNameAdditionalInfo\": \"Informações adicionais e complementares.\",\r\n      \"isLimitFlexible\": true,\r\n      \"limitAmount\": {\r\n        \"amount\": \"12000.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"usedAmount\": {\r\n        \"amount\": \"4200.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"availableAmount\": {\r\n        \"amount\": \"7800.0000\",\r\n        \"currency\": \"BRL\"\r\n      }\r\n    }\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"last\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"totalRecords\": 1,\r\n    \"totalPages\": 1,\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "params",
-              "modifier": "account_id",
-              "value": "NSSHLZRCRUER",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false
-        }
-      ],
-      "enabled": true,
-      "responseMode": null
-    },
-    {
-      "uuid": "2973418e-1623-4e41-bf12-650112211e30",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "credit/:account_id/transactions",
-      "responses": [
-        {
-          "uuid": "0228eda0-6f75-4948-a8ba-da752add089f",
-          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"transactionId\": \"TXpRMU9UQTROMWhZV2xSU1FUazJSMDl\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"675.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"675.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-06\",\r\n      \"billPostDate\": \"2023-04-06\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"gqvdPkZVYMXaLr1r7KHcuqVQ1A3SidM\",\r\n      \"identificationNumber\": \"4454\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1500.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1500.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-04\",\r\n      \"billPostDate\": \"2023-04-04\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"kjdCUJNLgsHmksEUyVPXVeOyOZ7kmR4\",\r\n      \"identificationNumber\": \"4455\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"800.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"800.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-01\",\r\n      \"billPostDate\": \"2023-04-01\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"ugGtWTU3dYJJSSh9yb5Ue6COvqvLJ8V\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-28\",\r\n      \"billPostDate\": \"2023-03-28\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"yWhvmkGG2TMbPX8UcC4d9ndHe7IUO1O\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"2000.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"2000.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-25\",\r\n      \"billPostDate\": \"2023-03-25\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"5OlyHuhgsdcoPL2OkNX63EqfdES1CzM\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"CASHBACK\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1780.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1780.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-21\",\r\n      \"billPostDate\": \"2023-03-21\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"s4YmrPN9R967fFH2dmXMBggAyOhpWrp\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-17\",\r\n      \"billPostDate\": \"2023-03-17\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"9pdV5WLsvZilRmABp3rKOQmipbyjqYk\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"285.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"285.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-13\",\r\n      \"billPostDate\": \"2023-03-13\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"HkxPjR6WJdtH9gs1aQXCiiHNbzijXpx\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"170.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"170.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-10\",\r\n      \"billPostDate\": \"2023-03-10\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"JryrGN6pHxxNpihf9j5csZaf8bQryWG\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"100.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"100.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-06\",\r\n      \"billPostDate\": \"2023-03-06\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "params",
-              "modifier": "account_id",
-              "value": "XXZTR3459087",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true
-        },
-        {
-          "uuid": "c2154933-8b19-4ba1-8ba2-5e6e0a87268e",
-          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"transactionId\": \"TXpRMU9UQTROMWhZV2xSU1FUazJSMDl\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"550.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"550.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-06\",\r\n      \"billPostDate\": \"2023-04-06\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"gqvdPkZVYMXaLr1r7KHcuqVQ1A3SidM\",\r\n      \"identificationNumber\": \"4454\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-04\",\r\n      \"billPostDate\": \"2023-04-04\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"kjdCUJNLgsHmksEUyVPXVeOyOZ7kmR4\",\r\n      \"identificationNumber\": \"4455\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-04-01\",\r\n      \"billPostDate\": \"2023-04-01\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"ugGtWTU3dYJJSSh9yb5Ue6COvqvLJ8V\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-28\",\r\n      \"billPostDate\": \"2023-03-28\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"yWhvmkGG2TMbPX8UcC4d9ndHe7IUO1O\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"80.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"80.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-25\",\r\n      \"billPostDate\": \"2023-03-25\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"5OlyHuhgsdcoPL2OkNX63EqfdES1CzM\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"CASHBACK\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1700.0400\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-21\",\r\n      \"billPostDate\": \"2023-03-21\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"s4YmrPN9R967fFH2dmXMBggAyOhpWrp\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"700.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-17\",\r\n      \"billPostDate\": \"2023-03-17\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"9pdV5WLsvZilRmABp3rKOQmipbyjqYk\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"300.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-13\",\r\n      \"billPostDate\": \"2023-03-13\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"HkxPjR6WJdtH9gs1aQXCiiHNbzijXpx\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"450.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"450.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-10\",\r\n      \"billPostDate\": \"2023-03-10\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n    {\r\n      \"transactionId\": \"JryrGN6pHxxNpihf9j5csZaf8bQryWG\",\r\n      \"identificationNumber\": \"4453\",\r\n      \"transactionName\": \"PGTO\",\r\n      \"billId\": \"MTU0OTU1NjI2NTk4OTRmc2ZhZDRmc2Q1NmZkM\",\r\n      \"creditDebitType\": \"DEBITO\",\r\n      \"transactionType\": \"PAGAMENTO\",\r\n      \"transactionalAdditionalInfo\": \"string\",\r\n      \"paymentType\": \"A_VISTA\",\r\n      \"feeType\": \"ANUIDADE\",\r\n      \"feeTypeAdditionalInfo\": \"string\",\r\n      \"otherCreditsType\": \"CREDITO_ROTATIVO\",\r\n      \"otherCreditsAdditionalInfo\": \"string\",\r\n      \"chargeIdentificator\": \"PARCELA_1\",\r\n      \"chargeNumber\": 12,\r\n      \"brazilianAmount\": {\r\n        \"amount\": \"1520.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"amount\": {\r\n        \"amount\": \"1520.0000\",\r\n        \"currency\": \"BRL\"\r\n      },\r\n      \"transactionDate\": \"2023-03-06\",\r\n      \"billPostDate\": \"2023-03-06\",\r\n      \"payeeMCC\": 5137\r\n    },\r\n  ],\r\n  \"links\": {\r\n    \"self\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"first\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"prev\": \"https://api.banco.com.br/open-banking/api/v1/resource\",\r\n    \"next\": \"https://api.banco.com.br/open-banking/api/v1/resource\"\r\n  },\r\n  \"meta\": {\r\n    \"requestDateTime\": \"2021-05-21T08:30:00Z\"\r\n  }\r\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "params",
-              "modifier": "account_id",
-              "value": "NSSHLZRCRUER",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false
-        }
-      ],
-      "enabled": true,
-      "responseMode": null
-    }
-  ],
-  "rootChildren": [
-    {
-      "type": "route",
-      "uuid": "9adf3fa8-2516-4331-a248-93ef67e76a8e"
-    },
-    {
-      "type": "route",
-      "uuid": "efd5dbff-4418-47d6-9025-185254ef9521"
-    },
-    {
-      "type": "route",
-      "uuid": "43c6fea1-2f35-497b-9052-905d162f5d21"
-    },
-    {
-      "type": "route",
-      "uuid": "e84acf36-030f-4ae0-837c-ba12a6a2d706"
-    },
-    {
-      "type": "route",
-      "uuid": "9cc2e694-8665-4ed8-90e4-e970d87af153"
-    },
-    {
-      "type": "route",
-      "uuid": "2973418e-1623-4e41-bf12-650112211e30"
-    }
-  ],
-  "proxyMode": false,
-  "proxyHost": "",
-  "proxyRemovePrefix": false,
-  "tlsOptions": {
-    "enabled": false,
-    "type": "CERT",
-    "pfxPath": "",
-    "certPath": "",
-    "keyPath": "",
-    "caPath": "",
-    "passphrase": ""
-  },
-  "cors": true,
-  "headers": [
-    {
-      "key": "Content-Type",
-      "value": "application/json"
-    }
-  ],
-  "proxyReqHeaders": [
-    {
-      "key": "",
-      "value": ""
-    }
-  ],
-  "proxyResHeaders": [
-    {
-      "key": "",
-      "value": ""
-    }
-  ],
-  "data": [
-    {
-      "uuid": "fb750863-5f9e-4008-b500-ca03cf323c7d",
-      "id": "mfvs",
-      "name": "Users",
-      "documentation": "",
-      "value": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]"
-    }
-  ]
-}
+    "cors": true,
+    "headers": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "proxyReqHeaders": [
+      {
+        "key": "",
+        "value": ""
+      }
+    ],
+    "proxyResHeaders": [
+      {
+        "key": "",
+        "value": ""
+      }
+    ],
+    "data": [
+      {
+        "uuid": "fb750863-5f9e-4008-b500-ca03cf323c7d",
+        "id": "mfvs",
+        "name": "Users",
+        "documentation": "",
+        "value": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]"
+      }
+    ]
+  }
