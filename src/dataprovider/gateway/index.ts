@@ -1,3 +1,6 @@
+import AccountGateway from "./AccountGateway";
 
 
-export {}
+export {
+    AccountGateway
+}
