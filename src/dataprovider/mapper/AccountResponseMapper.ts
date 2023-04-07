@@ -10,7 +10,7 @@ export class AccountResponseMapper{
             id: creditAccountDataResponse.creditCardAccountId,
             name: creditAccountDataResponse.brandName,
             value: creditLimits.usedAmount.amount,
-            cardNumber: 1234,
+            cardNumber: Math.floor(Math.random() * 9000) + 1000,
             expiryDate: AppUtils.generateRandomDate(),
             isCreditCard: true,
             limit: creditLimits.limitAmount.amount
@@ -24,7 +24,7 @@ export class AccountResponseMapper{
             id: debitAccountDataResponse.accountId,
             name: debitAccountDataResponse.brandName,
             value: debitAccountBalance.data.availableAmount.amount,
-            cardNumber: 1234,
+            cardNumber: Math.floor(Math.random() * 9000) + 1000,
             expiryDate: AppUtils.generateRandomDate(),
             isCreditCard: false,
             limit: null
