@@ -1,3 +1,8 @@
+import AccountGateway from "./AccountGateway";
+import TransactionGateway from "./TransactionGateway";
 
 
-export {}
+export {
+    AccountGateway,
+    TransactionGateway
+}
