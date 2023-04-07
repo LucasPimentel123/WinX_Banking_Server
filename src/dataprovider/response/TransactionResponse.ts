@@ -1,6 +1,6 @@
 export interface TransactionResponse {
     type: string;
     date: string;
-    value: number;
+    value: string;
     creditDebitType: string;
 }

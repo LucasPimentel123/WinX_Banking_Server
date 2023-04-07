@@ -6,11 +6,11 @@ export class AccountResponseMapper{
     public static from(account: AccountResponse, transactions: any): OpenFinanceResponse {
         const response: OpenFinanceResponse  = {
             name: account.name,
-            value: account.value,
+            value: parseFloat(account.value).toFixed(2),
             cardNumber: account.cardNumber,
             expiryDate: account.expiryDate,
             isCreditCard: account.isCreditCard,
-            limit: account.limit,
+            limit: account.limit !== null ? parseFloat(account.limit).toFixed(2) : account.limit,
             transactions: transactions
         }
 

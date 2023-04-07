@@ -7,12 +7,11 @@ export class TransactionResponseMapper{
         let result: TransactionResponse[] = []
         for(const transaction of transactionParamCredit.data) {
             const numberString = parseFloat(transaction.amount.amount).toFixed(2);
-            const number = parseFloat(numberString); 
 
             const response: TransactionResponse  = {
                 type: transaction.transactionType,
                 date: transaction.transactionDate,
-                value: number,
+                value: numberString,
                 creditDebitType: transaction.creditDebitType
             }
             result.push(response)
@@ -25,12 +24,11 @@ export class TransactionResponseMapper{
         let result: TransactionResponse[] = []
         for(const transaction of transactionParamDebit.data) {
             const numberString = parseFloat(transaction.transactionAmount.amount).toFixed(2);
-            const number = parseFloat(numberString); 
 
             const response: TransactionResponse  = {
                 type: transaction.type,
                 date: transaction.transactionDate,
-                value: number,
+                value: numberString,
                 creditDebitType: transaction.creditDebitType
             }
             result.push(response)

@@ -2,13 +2,12 @@ import axios from "axios";
 import ErrorResponse from "../../config/ErrorResponse";
 import { AccountResponseMapper } from "../mapper/AccountResponseMapper";
 import { AccountResponse } from "../response/AccountResponse";
-import { CreditAccountResponse } from "../response/CreditAccountResponse";
 import { DebitAccountResponse } from "../response/DebitAccountResponse";
 
 export default class AccountGateway {
     public async execute(): Promise<AccountResponse[]> {
         let response: Array<AccountResponse> = []
-        const creditAccount: CreditAccountResponse = await axios.get("http://172.20.10.2:3000/credit/accounts").then(response => {
+        const creditAccount: any = await axios.get("http://172.20.10.2:3000/credit/accounts").then(response => {
             return response.data;
         }).catch( _error =>{
             throw new ErrorResponse(404, "The API URL is invalid")

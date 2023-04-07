@@ -1,6 +1,6 @@
+import axios from "axios";
 import ErrorResponse from "../../config/ErrorResponse";
 import OpenFinanceURL from "../../constants/OpenFinanceURL";
-import axios from "axios";
 import { TransactionResponse } from "../response/TransactionResponse";
 import { TransactionResponseMapper } from "../mapper/TransactionResponseMapper";
 import { CreditTransactionsResponse } from "../response/CreditTransactionsResponse";
@@ -14,6 +14,7 @@ export default class TransactionGateway {
 
         if(isCredit){
             url = OpenFinanceURL.OPEN_FINANCE_CREDIT_TRANSACTIONS_URL.replace('{{account_id}}', accountId);
+            url = `http://172.20.10.2:3000/credit/${accountId}/transactions`
             
         } else{
             url = OpenFinanceURL.OPEN_FINANCE_DEBIT_TRANSACTIONS_URL.replace('{{account_id}}', accountId);
@@ -31,7 +32,6 @@ export default class TransactionGateway {
             response = TransactionResponseMapper.fromDebit(transactions as DebitTransactionsResponse);
         }
         
-        
-        return transactions;
+        return response;
     }
 }

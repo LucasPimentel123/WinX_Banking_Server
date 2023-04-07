@@ -1,9 +1,9 @@
 export interface AccountResponse {
     id: string;
     name: string;
-    value: number;
+    value: string;
     cardNumber: number;
     expiryDate: string;
     isCreditCard: boolean;
-    limit: number | null;
+    limit: string | null;
 }

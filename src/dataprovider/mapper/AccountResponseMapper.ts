@@ -21,7 +21,7 @@ export class AccountResponseMapper{
         const account: AccountResponse  = {
             id: debitAccountDataResponse.accountId,
             name: debitAccountDataResponse.brandName,
-            value: debitAccountBalance,
+            value: debitAccountBalance.data.availableAmount.amount,
             cardNumber: 1234, // TODO: Buscar numero do cartao
             expiryDate: "", // TODO: Buscar data de expiracao
             isCreditCard: false,
