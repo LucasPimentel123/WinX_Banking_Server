@@ -1,28 +1,30 @@
 import axios from "axios";
 import ErrorResponse from "../../config/ErrorResponse";
+import OpenFinanceURL from "../../constants/OpenFinanceURL";
 import { AccountResponseMapper } from "../mapper/AccountResponseMapper";
+import { AccountBalanceResponse } from "../response/AccountBalanceResponse";
+import { AccountLimitsResponse } from "../response/AccountLimitsResponse";
 import { AccountResponse } from "../response/AccountResponse";
+import { CreditAccountResponse } from "../response/CreditAccountResponse";
 import { DebitAccountResponse } from "../response/DebitAccountResponse";
 
 export default class AccountGateway {
     public async execute(): Promise<AccountResponse[]> {
         let response: Array<AccountResponse> = []
-        //TODO: trocar a url
-        const creditAccount: any = await axios.get("http://172.20.10.2:3000/credit/accounts").then(response => {
+        const creditAccount: CreditAccountResponse = await axios.get(OpenFinanceURL.OPEN_FINANCE_CREDIT_ACCOUNTS_URL).then(response => {
             return response.data;
         }).catch( _error =>{
             throw new ErrorResponse(404, "The API URL is invalid")
         })
-        //TODO: trocar a url
-        const debitAccount: DebitAccountResponse = await axios.get("http://172.20.10.2:3000/debit/accounts").then(response => {
+        const debitAccount: DebitAccountResponse = await axios.get(OpenFinanceURL.OPEN_FINANCE_DEBIT_ACCOUNTS_URL).then(response => {
             return response.data;
         }).catch( _error =>{
             throw new ErrorResponse(404, "The API URL is invalid")
         })
 
         for(const account of creditAccount.data){
-            //TODO: corrigir any e trocar url
-            const creditAccountLimits: any = await axios.get(`http://172.20.10.2:3000/credit/${account.creditCardAccountId}/limits`).then(response => {
+            const url = OpenFinanceURL.OPEN_FINANCE_CREDIT_LIMITS_URL.replace('{{account_id}}', account.creditCardAccountId);
+            const creditAccountLimits: AccountLimitsResponse = await axios.get(url).then(response => {
                 return response.data;
             }).catch( _error =>{
                 throw new ErrorResponse(404, "The API URL is invalid")
@@ -31,8 +33,8 @@ export default class AccountGateway {
         }
 
         for(const account of debitAccount.data){
-            //TODO: corrigir any e trocar url
-            const debitAccountBalance: any = await axios.get(`http://172.20.10.2:3000/debit/accounts/${account.accountId}/balances`).then(response => {
+            const url = OpenFinanceURL.OPEN_FINANCE_DEBIT_BALANCES_URL.replace('{{account_id}}', account.accountId);
+            const debitAccountBalance: AccountBalanceResponse = await axios.get(url).then(response => {
                 return response.data;
             }).catch( _error =>{
                 throw new ErrorResponse(404, "The API URL is invalid")

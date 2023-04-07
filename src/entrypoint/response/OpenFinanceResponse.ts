@@ -1,3 +1,5 @@
+import { TransactionResponse } from "../../dataprovider/response/TransactionResponse";
+
 export interface OpenFinanceResponse {
     name: string;
     value: string;
@@ -5,5 +7,5 @@ export interface OpenFinanceResponse {
     expiryDate: string;
     isCreditCard: boolean;
     limit: string | null;
-    transactions: Array<any>
+    transactions: Array<TransactionResponse>
 }
