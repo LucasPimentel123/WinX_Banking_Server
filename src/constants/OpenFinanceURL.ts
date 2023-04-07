@@ -1,5 +1,5 @@
 export default class OpenFinanceURL {
-    public static readonly  OPEN_FINANCE_URL_BASE = "http://192.168.5.199:3000";    
+    public static readonly OPEN_FINANCE_URL_BASE = `http://${process.env.LOCAL_IP}:3000`;    
     public static readonly OPEN_FINANCE_DEBIT_ACCOUNTS_URL = `${OpenFinanceURL.OPEN_FINANCE_URL_BASE}/debit/accounts`   
     public static readonly OPEN_FINANCE_CREDIT_ACCOUNTS_URL = `${OpenFinanceURL.OPEN_FINANCE_URL_BASE}/credit/accounts`
     public static readonly OPEN_FINANCE_CREDIT_LIMITS_URL = `${OpenFinanceURL.OPEN_FINANCE_URL_BASE}/credit/{{account_id}}/limits`
