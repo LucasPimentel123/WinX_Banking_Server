@@ -1,0 +1,9 @@
+const { resolve } = require('path');
+
+// Precisa alterar depois
+module.exports = {
+    config: resolve(__dirname, 'src', 'config', 'app_db.ts'),
+    'models-path': resolve(__dirname, 'src', 'app', 'models'),
+    'migrations-path': resolve(__dirname, 'src', 'fb', 'migrations'),
+    'seeders-path': resolve(__dirname, 'src', 'database', 'seeds'),
+};
