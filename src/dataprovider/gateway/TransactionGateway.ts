@@ -14,8 +14,6 @@ export default class TransactionGateway {
 
         if(isCredit){
             url = OpenFinanceURL.OPEN_FINANCE_CREDIT_TRANSACTIONS_URL.replace('{{account_id}}', accountId);
-            url = `http://172.20.10.2:3000/credit/${accountId}/transactions`
-            
         } else{
             url = OpenFinanceURL.OPEN_FINANCE_DEBIT_TRANSACTIONS_URL.replace('{{account_id}}', accountId);
         }
