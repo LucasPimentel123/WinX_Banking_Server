@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import { loginUserSchema } from '../validators/UserSchema'
 import { LoginUserRequest } from "../request";
 import LoginUserService from "../../core/service/LoginUserService";
+import { User } from "../../db/model";
 
 export default class LoginUserController extends BaseController {
 
@@ -14,8 +15,8 @@ export default class LoginUserController extends BaseController {
         this.validateRequest(loginUserSchema, req, res);
         const user: LoginUserRequest = req.body;
 
-        await this.service.execute(user);
+        const userFinded: User = await this.service.execute(user);
 
-        res.status(200).send({ message: "User authenticated!" });        
+        res.status(200).send({ name: userFinded.name, cpf: userFinded.cpf });        
     }
 }
