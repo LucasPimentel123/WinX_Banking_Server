@@ -1,3 +1,5 @@
+import AppConstants from "../../constants/AppConstants";
+import { AppUtils } from "../../utils/AppUtils";
 import { AccountResponse } from "../response/AccountResponse";
 import { CreditAccountDataResponse } from "../response/CreditAccountResponse";
 import { DebitAccountDataResponse } from "../response/DebitAccountResponse";
@@ -8,8 +10,8 @@ export class AccountResponseMapper{
             id: creditAccountDataResponse.creditCardAccountId,
             name: creditAccountDataResponse.brandName,
             value: creditLimits.usedAmount.amount,
-            cardNumber: 1234, // TODO: Buscar numero do cartao
-            expiryDate: "", // TODO: Buscar data de expiracao
+            cardNumber: 1234,
+            expiryDate: AppUtils.generateRandomDate(),
             isCreditCard: true,
             limit: creditLimits.limitAmount.amount
         }
@@ -22,8 +24,8 @@ export class AccountResponseMapper{
             id: debitAccountDataResponse.accountId,
             name: debitAccountDataResponse.brandName,
             value: debitAccountBalance.data.availableAmount.amount,
-            cardNumber: 1234, // TODO: Buscar numero do cartao
-            expiryDate: "", // TODO: Buscar data de expiracao
+            cardNumber: 1234,
+            expiryDate: AppUtils.generateRandomDate(),
             isCreditCard: false,
             limit: null
         }
