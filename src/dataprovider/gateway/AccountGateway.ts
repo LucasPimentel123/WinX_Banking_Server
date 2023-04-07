@@ -8,29 +8,30 @@ import { DebitAccountResponse } from "../response/DebitAccountResponse";
 export default class AccountGateway {
     public async execute(): Promise<AccountResponse[]> {
         let response: Array<AccountResponse> = []
-
-        const creditAccount: CreditAccountResponse = await axios.get("http://localhost:3000/credit/accounts").then(response => {
+        const creditAccount: CreditAccountResponse = await axios.get("http://172.20.10.2:3000/credit/accounts").then(response => {
             return response.data;
         }).catch( _error =>{
             throw new ErrorResponse(404, "The API URL is invalid")
         })
-        const debitAccount: DebitAccountResponse = await axios.get("http://localhost:3000/debit/accounts").then(response => {
+        const debitAccount: DebitAccountResponse = await axios.get("http://172.20.10.2:3000/debit/accounts").then(response => {
             return response.data;
         }).catch( _error =>{
             throw new ErrorResponse(404, "The API URL is invalid")
         })
 
         for(const account of creditAccount.data){
-            const creditAccountLimits: any = await axios.get(`http://localhost:3000/credit/${account.creditCardAccountId}/limits`).then(response => {
+            //TODO: corrigir any
+            const creditAccountLimits: any = await axios.get(`http://172.20.10.2:3000/credit/${account.creditCardAccountId}/limits`).then(response => {
                 return response.data;
             }).catch( _error =>{
                 throw new ErrorResponse(404, "The API URL is invalid")
             })
-            response.push(AccountResponseMapper.fromCredit(account,creditAccountLimits))
+            response.push(AccountResponseMapper.fromCredit(account,creditAccountLimits.data[0]))
         }
 
         for(const account of debitAccount.data){
-            const debitAccountBalance: any = await axios.get(`http://localhost:3000/debit/accounts/${account.accountId}/balances`).then(response => {
+            //TODO: corrigir any
+            const debitAccountBalance: any = await axios.get(`http://172.20.10.2:3000/debit/accounts/${account.accountId}/balances`).then(response => {
                 return response.data;
             }).catch( _error =>{
                 throw new ErrorResponse(404, "The API URL is invalid")

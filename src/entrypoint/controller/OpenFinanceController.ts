@@ -22,7 +22,6 @@ export default class OpenFinanceController extends BaseController {
             const transactions = await this.transactionService.execute(account.id, account.isCreditCard)
             response.push(AccountResponseMapper.from(account, transactions))
         }
-
         res.status(200).send({ message: "User authenticated!" });        
     }
 }
