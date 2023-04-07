@@ -4,12 +4,12 @@ import ErrorResponse from "../../config/ErrorResponse";
 
 export default class RegisterUserService {
     public execute = async (user: CreateUserRequest) => {
-        let userResponse: any;
+        let userExists: any;
         await User.findOne({where: {cpf: user.cpf}}).then(userData => {
-            userResponse = userData;
+            userExists = userData;
         }).catch(err =>{ throw new ErrorResponse(503,"The server is unavailable to handle this request right now.") });
 
-        if(!userResponse){
+        if(!userExists){
             await User.create(user);
         }
         else{
