@@ -3,10 +3,11 @@ import { Request, Response, NextFunction } from 'express';
 import { loginUserSchema } from '../validators/UserSchema'
 import { LoginUserRequest } from "../request";
 import TransactionService from "../../core/service/TransactionService";
+import { AccountService } from "../../core/service";
 
 export default class OpenFinanceController extends BaseController {
 
-    public constructor(private readonly accountService: any, private readonly transactionService: TransactionService){
+    public constructor(private readonly accountService: AccountService, private readonly transactionService: TransactionService){
         super();
     }
 
