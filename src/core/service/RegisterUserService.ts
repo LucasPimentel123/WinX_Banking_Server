@@ -18,7 +18,7 @@ export default class RegisterUserService {
                     user.password = passwordHashed;
                     await User.create(user);
                  })
-                .catch(err => { 
+                .catch(_err => { 
                     throw new ErrorResponse(400,"Error to save user! Try again later!") 
                 });
         }

@@ -1,5 +1,7 @@
+import LoginUserService from "./LoginUserService";
 import RegisterUserService from "./RegisterUserService";
 
 export{
-    RegisterUserService
+    RegisterUserService,
+    LoginUserService
 }
