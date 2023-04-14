@@ -1,5 +1,9 @@
 # WinX Banking Server
 
+A aplicação WinX banking é um projeto mobile que visa utilizar o open finance para que se tenha um extrato de forma única de acordo com todas as contas bancárias do usuário. O projeto foi desenvolvido durante o Hackaton do BRB na Campus Party e suporta várias evoluções e ampliações de escopo.
+
+## Como Rodar
+
 Para realização desse desafio, virtualizamos a api disponibilizada pela equipe do Campus Party que pode ser verificada no seguinte link: https://openfinancebrasil.atlassian.net/wiki/spaces/OF/pages/17367659
 
 Para realização dessa virtualização, foi utilizado o mockoon em que o environment para importar na ferramenta pode ser encontrado na pasta ./mockoon/mock.json. O guia de importação desse environment no mac, pode ser verificado na imagem abaixo.
@@ -30,3 +34,6 @@ Feito isso, basta subir o compose em que está dockerizado a aplicacao e o datab
 ```
 docker-compose up
 ```
+## Interface Gráfica
+
+A aplicação WinX Banking é uma aplicação mobile e o frontend da aplicação junto de mais instruções de como rodar o projeto podem ser encontrados no seguinte [repositório](https://github.com/VitorLamego/WinX_Banking).
